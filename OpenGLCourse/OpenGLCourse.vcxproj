@@ -71,24 +71,24 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\libs\glfw-3.3.8.bin.WIN64\include;C:\libs\glad\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\libs\glfw-3.3.8.bin.WIN64\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\libs\glfw-3.3.8.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <SourcePath>C:\libs\glad\src;$(SourcePath)</SourcePath>
+    <SourcePath>$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\libs\glfw-3.3.8.bin.WIN64\include;C:\libs\glad\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\libs\glfw-3.3.8.bin.WIN64\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\libs\glfw-3.3.8.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <SourcePath>C:\libs\glad\src;$(SourcePath)</SourcePath>
+    <SourcePath>$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\libs\glfw-3.3.8.bin.WIN64\include;C:\libs\glad\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\libs\glfw-3.3.8.bin.WIN64\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\libs\glfw-3.3.8.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <SourcePath>C:\libs\glad\src;$(SourcePath)</SourcePath>
+    <SourcePath>$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\libs\glfw-3.3.8.bin.WIN64\include;C:\libs\glad\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\libs\glfw-3.3.8.bin.WIN64\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\libs\glfw-3.3.8.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <SourcePath>C:\libs\glad\src;$(SourcePath)</SourcePath>
+    <SourcePath>$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -151,7 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="glad.c" />
     <ClCompile Include="OpenGLCourse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="glad.h" />
+    <ClInclude Include="khrplatform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
